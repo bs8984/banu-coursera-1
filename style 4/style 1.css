@@ -1,3 +1,4 @@
+/* Common styles for all devices */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -48,6 +49,15 @@ body {
     border-radius: 5%;
     color: rgb(151, 29, 29);
 }
+
+/* Styles for computer view */
+@media screen and (min-width: 992px) {
+    .details {
+        flex-direction: row;
+    }
+}
+
+/* Styles for mobile and tablet view */
 @media screen and (max-width: 991px) {
     .container {
         flex-direction: column;
@@ -55,5 +65,9 @@ body {
     }
     .details {
         flex-direction: column;
+    }
+    .detail {
+        width: 100%; /* Make details take full width */
+        margin: 10px 0; /* Adjust margin for better spacing */
     }
 }
